@@ -1,0 +1,5 @@
+D:\Mohamed Samy\ComfyBackend\infrastructure\obj\Debug\net9.0\infrastructure.csproj.AssemblyReference.cache
+D:\Mohamed Samy\ComfyBackend\infrastructure\obj\Debug\net9.0\infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mohamed Samy\ComfyBackend\infrastructure\obj\Debug\net9.0\infrastructure.AssemblyInfoInputs.cache
+D:\Mohamed Samy\ComfyBackend\infrastructure\obj\Debug\net9.0\infrastructure.AssemblyInfo.cs
+D:\Mohamed Samy\ComfyBackend\infrastructure\obj\Debug\net9.0\infrastructure.csproj.CoreCompileInputs.cache

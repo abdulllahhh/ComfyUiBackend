@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Mohamed Samy\\ComfyBackend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2AFCC2-003C-4891-9AB1-7367066D56F0}|infrastructure\\infrastructure.csproj|d:\\mohamed samy\\comfybackend\\infrastructure\\service\\modelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2AFCC2-003C-4891-9AB1-7367066D56F0}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\service\\modelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7149CDEA-2756-4693-B4E1-C550B3419BD7}|Models\\Models.csproj|d:\\mohamed samy\\comfybackend\\models\\interface\\imodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7149CDEA-2756-4693-B4E1-C550B3419BD7}|Models\\Models.csproj|solutionrelative:models\\interface\\imodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7149CDEA-2756-4693-B4E1-C550B3419BD7}|Models\\Models.csproj|d:\\mohamed samy\\comfybackend\\models\\dtos\\response\\workflowresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7149CDEA-2756-4693-B4E1-C550B3419BD7}|Models\\Models.csproj|solutionrelative:models\\dtos\\response\\workflowresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7149CDEA-2756-4693-B4E1-C550B3419BD7}|Models\\Models.csproj|d:\\mohamed samy\\comfybackend\\models\\dtos\\request\\workflowrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7149CDEA-2756-4693-B4E1-C550B3419BD7}|Models\\Models.csproj|solutionrelative:models\\dtos\\request\\workflowrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{410C54CC-981C-4103-A628-ECF89D2E7D0D}|ComfyBackend\\ComfyBackend.csproj|d:\\mohamed samy\\comfybackend\\comfybackend\\comfybackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{410C54CC-981C-4103-A628-ECF89D2E7D0D}|ComfyBackend\\ComfyBackend.csproj|solutionrelative:comfybackend\\comfybackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2AFCC2-003C-4891-9AB1-7367066D56F0}|infrastructure\\infrastructure.csproj|d:\\mohamed samy\\comfybackend\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{FA2AFCC2-003C-4891-9AB1-7367066D56F0}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2AFCC2-003C-4891-9AB1-7367066D56F0}|infrastructure\\infrastructure.csproj|d:\\mohamed samy\\comfybackend\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2AFCC2-003C-4891-9AB1-7367066D56F0}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WorkflowResponse.cs",
+              "DocumentMoniker": "D:\\Mohamed Samy\\ComfyBackend\\Models\\Dtos\\Response\\WorkflowResponse.cs",
+              "RelativeDocumentMoniker": "Models\\Dtos\\Response\\WorkflowResponse.cs",
+              "ToolTip": "D:\\Mohamed Samy\\ComfyBackend\\Models\\Dtos\\Response\\WorkflowResponse.cs",
+              "RelativeToolTip": "Models\\Dtos\\Response\\WorkflowResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T03:37:33.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WorkflowRequest.cs",
+              "DocumentMoniker": "D:\\Mohamed Samy\\ComfyBackend\\Models\\Dtos\\Request\\WorkflowRequest.cs",
+              "RelativeDocumentMoniker": "Models\\Dtos\\Request\\WorkflowRequest.cs",
+              "ToolTip": "D:\\Mohamed Samy\\ComfyBackend\\Models\\Dtos\\Request\\WorkflowRequest.cs",
+              "RelativeToolTip": "Models\\Dtos\\Request\\WorkflowRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T03:35:46.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IModelService.cs",
+              "DocumentMoniker": "D:\\Mohamed Samy\\ComfyBackend\\Models\\Interface\\IModelService.cs",
+              "RelativeDocumentMoniker": "Models\\Interface\\IModelService.cs",
+              "ToolTip": "D:\\Mohamed Samy\\ComfyBackend\\Models\\Interface\\IModelService.cs",
+              "RelativeToolTip": "Models\\Interface\\IModelService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T03:30:57.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ModelService.cs",
+              "DocumentMoniker": "D:\\Mohamed Samy\\ComfyBackend\\infrastructure\\Service\\ModelService.cs",
+              "RelativeDocumentMoniker": "infrastructure\\Service\\ModelService.cs",
+              "ToolTip": "D:\\Mohamed Samy\\ComfyBackend\\infrastructure\\Service\\ModelService.cs",
+              "RelativeToolTip": "infrastructure\\Service\\ModelService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T03:29:21.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ComfyBackend.csproj",
+              "DocumentMoniker": "D:\\Mohamed Samy\\ComfyBackend\\ComfyBackend\\ComfyBackend.csproj",
+              "RelativeDocumentMoniker": "ComfyBackend\\ComfyBackend.csproj",
+              "ToolTip": "D:\\Mohamed Samy\\ComfyBackend\\ComfyBackend\\ComfyBackend.csproj",
+              "RelativeToolTip": "ComfyBackend\\ComfyBackend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-31T16:43:51.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "infrastructure.csproj",
+              "DocumentMoniker": "D:\\Mohamed Samy\\ComfyBackend\\infrastructure\\infrastructure.csproj",
+              "RelativeDocumentMoniker": "infrastructure\\infrastructure.csproj",
+              "ToolTip": "D:\\Mohamed Samy\\ComfyBackend\\infrastructure\\infrastructure.csproj",
+              "RelativeToolTip": "infrastructure\\infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-31T16:43:50.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Mohamed Samy\\ComfyBackend\\infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Mohamed Samy\\ComfyBackend\\infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "infrastructure\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T01:13:59.89Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 100,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
