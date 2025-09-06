@@ -10,6 +10,7 @@ namespace Models.Entities
     public class AppUser : IdentityUser<int>
     {
         public int Credits { get; set; } = 10; // default free credits
+        public string Username { get; set; }
         public ICollection<Payment> Payments { get; set; }
         public ICollection<RefreshToken> RefreshTokens { get; set; }
 
