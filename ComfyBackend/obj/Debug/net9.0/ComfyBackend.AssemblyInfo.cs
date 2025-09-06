@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ComfyBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e32ac767959c5153f59e869fe9ba8fefc10f3f6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ComfyBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ComfyBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
