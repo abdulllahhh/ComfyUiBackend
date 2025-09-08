@@ -94,7 +94,6 @@ namespace ComfyBackend.Controllers
 
             return Ok(new
             {
-                user.Username,
                 user.Email,
                 user.Credits
             });
