@@ -14,6 +14,8 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace ComfyBackend.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class AccountController(UserManager<AppUser> userManager,
                           SignInManager<AppUser> signInManager,
                           JwtService jwtService,
