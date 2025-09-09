@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Models.Dtos.Request;
 using Models.Entities;
+using Models.Interface;
 using System.Security.Claims;
 
 namespace ComfyBackend.Controllers
@@ -15,7 +17,8 @@ namespace ComfyBackend.Controllers
     public class AuthController(UserManager<AppUser> userManager,
                           SignInManager<AppUser> signInManager,
                           JwtService jwtService,
-                          ApplicationDbContext context
+                          ApplicationDbContext context,
+                          IWorkflowService workflowService
         ) : ControllerBase
     {
         private readonly UserManager<AppUser> _userManager = userManager;
@@ -97,6 +100,39 @@ namespace ComfyBackend.Controllers
                 user.Email,
                 user.Credits
             });
+        }
+        private readonly IWorkflowService _workflowService = workflowService;
+
+
+        [Authorize]
+        [HttpPost]
+        [Route("run-model")]
+        public async Task<IActionResult> RunModel([FromBody] WorkflowRequest request)
+        {
+            Console.WriteLine("starting runmodel");
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userIdClaim))
+                return Unauthorized(new { error = "User ID not found in token" });
+            Console.WriteLine("userid claim " + userIdClaim);
+            var userId = int.Parse(userIdClaim);
+            Console.WriteLine("user Id " + userId);
+            try
+            {
+                var result = await _workflowService.RunModelAsync(userId, request);
+                return Ok(result);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(new { error = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = ex.Message });
+            }
         }
     }
 
