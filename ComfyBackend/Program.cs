@@ -27,7 +27,13 @@ namespace ComfyBackend
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddAuthentication("Bearer")
+            builder.Services.AddAuthentication(
+                options =>
+                {
+                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                }
+                )
             .AddJwtBearer("Bearer", options =>
             {
                 options.TokenValidationParameters = new TokenValidationParameters
@@ -43,7 +49,11 @@ namespace ComfyBackend
                     )
                 };
             });
-
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "";
+                options.AccessDeniedPath = "";
+            });
             builder.Services.AddAuthorization();
 
             builder.Services.AddControllers();
