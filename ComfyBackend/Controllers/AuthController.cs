@@ -104,7 +104,7 @@ namespace ComfyBackend.Controllers
         private readonly IWorkflowService _workflowService = workflowService;
 
 
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         [Route("run-model")]
         public async Task<IActionResult> RunModel(WorkflowRequest request)
