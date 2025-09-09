@@ -19,14 +19,13 @@ namespace infrastructure.Service
         {
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()), // standard "subject"
-                new Claim(JwtRegisteredClaimNames.Email, user.Email!)
-            };
-
+            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()), // ✅ subject = user ID
+            new Claim(JwtRegisteredClaimNames.Email, user.Email!)       // ✅ email
+        };
 
             var key = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(_config["Jwt:Key"]!)
-                    );
+                Encoding.UTF8.GetBytes(_config["Jwt:Key"]!)
+            );
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
@@ -34,7 +33,8 @@ namespace infrastructure.Service
                 audience: _config["Jwt:Audience"],
                 claims: claims,
                 expires: DateTime.UtcNow.AddMinutes(60),
-                signingCredentials: creds);
+                signingCredentials: creds
+            );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }

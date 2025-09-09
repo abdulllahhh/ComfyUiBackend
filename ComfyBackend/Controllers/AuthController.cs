@@ -106,13 +106,13 @@ namespace ComfyBackend.Controllers
         private readonly IWorkflowService _workflowService = workflowService;
 
 
-        //[Authorize]
+        [Authorize]
         [HttpPost]
         [Route("run-model")]
         public async Task<IActionResult> RunModel(WorkflowRequest request)
         {
             Console.WriteLine("starting runmodel");
-            var userIdClaim = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            var userIdClaim = User.FindFirstValue(JwtRegisteredClaimNames.Sub); 
             Console.WriteLine("userid claim " + userIdClaim);
             if (string.IsNullOrEmpty(userIdClaim))
                 return Unauthorized(new { error = "User ID not found in token" });
