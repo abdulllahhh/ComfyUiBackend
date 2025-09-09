@@ -23,6 +23,7 @@ namespace ComfyBackend.Controllers
 
         [Authorize]
         [HttpPost]
+        [Route("run-model")]
         public async Task<IActionResult> RunModel([FromBody] WorkflowRequest request)
         {
             Console.WriteLine("starting runmodel");
