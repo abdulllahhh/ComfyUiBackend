@@ -20,6 +20,9 @@ namespace ComfyBackend
             builder.Services.AddHttpClient<IModelService, ModelService>();
             builder.Services.AddScoped<IWorkflowService, WorkflowService>();
             builder.Services.AddScoped<JwtService>();
+            // Add services
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -68,6 +71,8 @@ namespace ComfyBackend
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
