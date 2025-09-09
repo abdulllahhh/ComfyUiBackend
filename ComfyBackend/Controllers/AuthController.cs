@@ -9,6 +9,8 @@ using Models.Dtos.Request;
 using Models.Entities;
 using Models.Interface;
 using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace ComfyBackend.Controllers
 {
@@ -110,7 +112,7 @@ namespace ComfyBackend.Controllers
         public async Task<IActionResult> RunModel(WorkflowRequest request)
         {
             Console.WriteLine("starting runmodel");
-            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userIdClaim = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
             if (string.IsNullOrEmpty(userIdClaim))
                 return Unauthorized(new { error = "User ID not found in token" });
             Console.WriteLine("userid claim " + userIdClaim);
