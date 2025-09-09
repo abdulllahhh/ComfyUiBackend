@@ -18,6 +18,7 @@ namespace ComfyBackend
 
             // Add services to the container.
             builder.Services.AddHttpClient<IModelService, ModelService>();
+            builder.Services.AddScoped<IWorkflowService, WorkflowService>();
             builder.Services.AddScoped<JwtService>();
 
             builder.Services.AddControllers();

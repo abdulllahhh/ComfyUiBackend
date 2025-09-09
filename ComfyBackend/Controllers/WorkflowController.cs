@@ -18,7 +18,7 @@ namespace ComfyBackend.Controllers
     [ApiController]
     public class WorkflowController( IWorkflowService workflowService) : ControllerBase
     {
-        //private readonly IWorkflowService _workflowService = workflowService;
+        private readonly IWorkflowService _workflowService = workflowService;
 
 
         [Authorize]
@@ -32,7 +32,7 @@ namespace ComfyBackend.Controllers
             var userId = int.Parse(userIdClaim);
             try
             {
-                var result = await workflowService.RunModelAsync(userId, request);
+                var result = await _workflowService.RunModelAsync(userId, request);
                 return Ok(result);
             }
             catch (UnauthorizedAccessException ex)
