@@ -27,14 +27,8 @@ namespace ComfyBackend
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            var jwtConfig = builder.Configuration.GetSection("Jwt");
-
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
+            builder.Services.AddAuthentication("Bearer")
+            .AddJwtBearer("Bearer", options =>
             {
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
@@ -42,14 +36,15 @@ namespace ComfyBackend
                     ValidateAudience = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-
-                    ValidIssuer = jwtConfig["Issuer"],
-                    ValidAudience = jwtConfig["Audience"],
+                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                    ValidAudience = builder.Configuration["Jwt:Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(jwtConfig["Key"]!)
+                        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
                     )
                 };
             });
+
+            builder.Services.AddAuthorization();
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
