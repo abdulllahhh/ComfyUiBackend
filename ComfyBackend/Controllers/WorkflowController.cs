@@ -24,7 +24,7 @@ namespace ComfyBackend.Controllers
         [Authorize]
         [HttpPost]
         [Route("run-model")]
-        public async Task<IActionResult> RunModel([FromBody] WorkflowRequest request)
+        public async Task<IActionResult> RunModel(WorkflowRequest request)
         {
             Console.WriteLine("starting runmodel");
             var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
