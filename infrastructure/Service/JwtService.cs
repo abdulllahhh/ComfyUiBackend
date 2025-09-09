@@ -19,7 +19,7 @@ namespace infrastructure.Service
         {
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()), // standard "subject"
                 new Claim(JwtRegisteredClaimNames.Email, user.Email!)
             };
 
