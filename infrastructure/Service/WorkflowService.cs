@@ -13,29 +13,27 @@ namespace infrastructure.Service
 {
     public class WorkflowService(ApplicationDbContext context, UserManager<AppUser> userManager, IModelService modelService) : IWorkflowService
     {
-        private readonly ApplicationDbContext _context = context;
-        private readonly UserManager<AppUser> _userManager = userManager;
-        private readonly IModelService _modelService = modelService;
+
         public async Task<object> RunModelAsync(int userId, WorkflowRequest request)
         {
-            var user = await _userManager.FindByIdAsync(userId.ToString()) ?? throw new UnauthorizedAccessException("User not found");
+            var user = await userManager.FindByIdAsync(userId.ToString()) ?? throw new UnauthorizedAccessException("User not found");
             if (user.Credits <= 0)
                 throw new InvalidOperationException("Insufficient credits");
 
             // Decrement first
             user.Credits -= 1;
-            await _context.SaveChangesAsync();
+            await context.SaveChangesAsync();
 
             try
             {
-                var result = await _modelService.RunWorkflowAsync(request);
+                var result = await modelService.RunWorkflowAsync(request);
                 return result;
             }
             catch
             {
                 // Refund if failed
                 user.Credits += 1;
-                await _context.SaveChangesAsync();
+                await context.SaveChangesAsync();
                 throw;
             }
         }

@@ -8,14 +8,13 @@ using System.Text;
 using System.Text.Json;
 namespace infrastructure.Service;
 
-public class ModelService : IModelService
+public class ModelService(HttpClient httpClient, IConfiguration config) : IModelService
 {
-    private readonly HttpClient _httpClient;
-    private readonly IConfiguration _config;
+
     public async Task<WorkflowResponse> RunWorkflowAsync(WorkflowRequest request)
     {
-        var flaskUrl = _config["Flask:Url"];
-        var flaskToken = _config["Flask:Token"];
+        var flaskUrl = config["Flask:Url"];
+        var flaskToken = config["Flask:Token"];
 
         var json = JsonSerializer.Serialize(request);
         var httpRequest = new HttpRequestMessage(HttpMethod.Post, flaskUrl)
@@ -26,7 +25,7 @@ public class ModelService : IModelService
         // Add security header (same as Flask API expects)
         httpRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", flaskToken);
 
-        var response = await _httpClient.SendAsync(httpRequest);
+        var response = await httpClient.SendAsync(httpRequest);
         var rawResponse = await response.Content.ReadAsStringAsync();
 
         return new WorkflowResponse
