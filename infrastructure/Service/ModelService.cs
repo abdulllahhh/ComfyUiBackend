@@ -27,7 +27,10 @@ public class ModelService : IModelService
         {
             Content = new StringContent(json, Encoding.UTF8, "application/json")
         };
-
+        Console.WriteLine("Calling Flask API:");
+        Console.WriteLine($"URL: {flaskUrl}");
+        Console.WriteLine($"Headers: Authorization: Bearer {flaskToken}");
+        Console.WriteLine($"Body: {json}");
         // Add security header (same as Flask API expects)
         httpRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", flaskToken);
 
