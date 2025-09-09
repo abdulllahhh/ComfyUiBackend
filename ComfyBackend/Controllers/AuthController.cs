@@ -113,9 +113,9 @@ namespace ComfyBackend.Controllers
         {
             Console.WriteLine("starting runmodel");
             var userIdClaim = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            Console.WriteLine("userid claim " + userIdClaim);
             if (string.IsNullOrEmpty(userIdClaim))
                 return Unauthorized(new { error = "User ID not found in token" });
-            Console.WriteLine("userid claim " + userIdClaim);
             var userId = int.Parse(userIdClaim);
             Console.WriteLine("user Id " + userId);
             try
