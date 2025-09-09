@@ -25,8 +25,11 @@ namespace ComfyBackend.Controllers
         [HttpPost("run-model")]
         public async Task<IActionResult> RunModel([FromBody] WorkflowRequest request)
         {
-            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userIdClaim))
+                return Unauthorized(new { error = "User ID not found in token" });
 
+            var userId = int.Parse(userIdClaim);
             try
             {
                 var result = await _workflowService.RunModelAsync(userId, request);
